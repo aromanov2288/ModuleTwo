@@ -1,7 +1,8 @@
-package ru.romanov.moduletwo;
+package ru.romanov.moduletwo.serviece;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.romanov.moduletwo.TestUtils;
 import ru.romanov.moduletwo.dao.QuestionDAO;
 import ru.romanov.moduletwo.dao.QuestionDAOImpl;
 import ru.romanov.moduletwo.domain.Question;

@@ -6,9 +6,10 @@ public interface LocaleService {
 
     /**
      * Метод сохраняет локаль приложения.
-     * @param locale
+     * @param localeCode код локали
+     * @return сообщение с результатом
      */
-    void saveLocale(Locale locale);
+    String changeLocale(String localeCode);
 
     /**
      * Метод возвращает локаль приложения.

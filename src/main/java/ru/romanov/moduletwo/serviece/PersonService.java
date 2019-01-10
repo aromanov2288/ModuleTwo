@@ -5,14 +5,28 @@ import ru.romanov.moduletwo.domain.Person;
 public interface PersonService {
 
     /**
-     * Метод сохраняет данные пользователя.
+     * Метод регистрирует нового пользователя.
      * @param person данные пользователя
+     * @return результат
      */
-    void savePerson(Person person);
+    boolean registerPerson(Person person);
 
     /**
-     * Получить данные пользователя.
-     * @return
+     * Мето осуществляте вход пользователя.
+     * @param person данные пользователя
+     * @return результат
      */
-    Person getPerson();
+    boolean loginPerson(Person person);
+
+    /**
+     * Метод сбрасывает активного пользователя.
+     * @return сообщение с результатом
+     */
+    String logoutPerson();
+
+    /**
+     * Метод возвращает данные активно пользователя.
+     * @return пользователь
+     */
+    Person getActivePerson();
 }

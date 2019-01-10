@@ -1,20 +1,21 @@
-package ru.romanov.moduletwo;
+package ru.romanov.moduletwo.serviece;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import ru.romanov.moduletwo.TestUtils;
 import ru.romanov.moduletwo.dao.QuestionDAO;
 import ru.romanov.moduletwo.dao.ResultDAO;
 import ru.romanov.moduletwo.domain.Question;
-import ru.romanov.moduletwo.serviece.LocaleService;
-import ru.romanov.moduletwo.serviece.ResultServiceImpl;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;

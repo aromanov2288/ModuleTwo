@@ -1,32 +1,48 @@
 package ru.romanov.moduletwo.domain;
 
+import java.util.Objects;
+
 public class Person {
 
-    private String name;
+    private String userName;
 
-    private String patronName;
-
-    public String getName() {
-        return name;
-    }
+    private String password;
 
     public Person() {
     }
 
     public Person(String name, String patronName) {
-        this.name = name;
-        this.patronName = patronName;
+        this.userName = name;
+        this.password = patronName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getPatronName() {
-        return patronName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setPatronName(String patronName) {
-        this.patronName = patronName;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(userName, person.userName) &&
+                Objects.equals(password, person.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userName, password);
     }
 }
