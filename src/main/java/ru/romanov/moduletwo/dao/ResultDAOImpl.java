@@ -27,6 +27,4 @@ public class ResultDAOImpl implements ResultDAO {
     public Map<Integer, String> getAnswers() {
         return result.getAnswersMap();
     }
-
-
 }

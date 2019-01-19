@@ -2,17 +2,25 @@ package ru.romanov.moduletwo.dao;
 
 import ru.romanov.moduletwo.domain.Person;
 
+import java.util.List;
+
 public interface PersonDAO {
 
     /**
-     * Метод сохраняет данные пользователя.
-     * @param person данные пользователя
+     * Метод возвращает список зарегистрированных пользователей.
+     * @return список пользователей
      */
-    void savePerson(Person person);
+    List<Person> getPersonList();
 
     /**
-     * Получить данные пользователя.
-     * @return
+     * Метод возвращает активного пользователя.
+     * @return пользователь.
      */
-    Person getPerson();
+    Person getActivePerson();
+
+    /**
+     * Метод устанавливает активного пользователя.
+     * @param person пользователь
+     */
+    void setActivePerson(Person person);
 }

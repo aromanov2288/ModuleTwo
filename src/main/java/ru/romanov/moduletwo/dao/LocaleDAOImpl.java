@@ -9,6 +9,10 @@ public class LocaleDAOImpl implements LocaleDao {
 
     private Locale locale;
 
+    public LocaleDAOImpl() {
+        this.locale = Locale.getDefault();
+    }
+
     /**
      * {@inheritDoc}
      */
